@@ -1,0 +1,41 @@
+.pricelist__inner{
+    padding-top: 59px;
+}   
+.pricelist__options{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 88px;
+    padding-bottom: 217px;
+}
+.pricelist__choice{
+    width: 350px;
+    
+}
+.pricelist__title{
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 48px;
+    color: #37447E;
+}
+.pricelist__subtitle{
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 32px;
+    color: #091133;
+}
+.pricelist__paragraph{
+    font-size: 14px;
+    line-height: 24px;
+    color: #5D6970;
+}
+.pricelist__button{
+    width: 189px;
+    margin-top: 30px;
+    background: #111B47;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    border: 0;
+}

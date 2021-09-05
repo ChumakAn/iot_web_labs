@@ -1,0 +1,13 @@
+@import "./normalize.min.css";
+
+@import "./globals.css";
+
+@import "./header.css";
+
+@import "./hero.css";
+
+@import "./second_page.css";
+
+@import "./pricelist.css";
+
+@import "./footer.css";

@@ -1,0 +1,52 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__nav ul{
+    display: flex;
+    
+}
+.header__nav-item{
+    margin-right: 60px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #505F98;
+}
+.header-nav-tools{
+    display: flex;
+}
+.header__title{
+    color: #37447E;
+    font-weight: 900;
+    font-size: 26px;
+}
+
+.header-button-buy-now{
+    margin-left: 26px;
+    width: 104px;
+    background: #FFD166;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #111B47;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 0;
+}
+.header-buttons{
+    margin-top: 18px;
+}
+
+.header-button-learn-now{
+    background: #111B47;
+    width: 104px;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 0;
+}   
+

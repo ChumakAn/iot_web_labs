@@ -1,0 +1,14 @@
+.hero{
+    
+    background: url(../images/Hori.svg) no-repeat right bottom;
+
+}
+.hero__inner{
+    width: 540px;
+    padding-top: 130px;
+    padding-bottom: 142px;  
+}
+.hero__icon_paragraphs{
+    display: flex;
+    padding-top: 45px;
+}

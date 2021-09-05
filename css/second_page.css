@@ -1,0 +1,15 @@
+.second_page{
+    
+    background: url(../images/undraw_mobile_login_ikmv.svg) no-repeat right 250px center;
+}
+
+.second_page__inner{
+    width:  540px;
+    padding-top:160px; 
+    padding-bottom: 162px; ;
+
+}
+.second_page__icon_paragraphs{
+    display: flex;
+    padding-top: 80px;
+}

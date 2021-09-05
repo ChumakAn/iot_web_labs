@@ -1,0 +1,84 @@
+.footer__navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer{
+    background-color: #E7ECFF;
+}
+.footer__logo{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__logo_date{
+    padding-top: 37px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #939EA4;
+}
+.footer__logo__name{
+    padding-top: 42px;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 38px;
+    color: #37447E;
+}
+.footer__hr{
+    background-color: #CDD1D4;
+    margin-top: 39px;
+    height: 1px;
+    border: 0;
+}
+.footer__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__button{    
+    margin:0 auto;
+    width: 109px;
+    background: #111B47;
+    border-radius: 2px;
+    color: #fff;
+    margin-top: 22px;
+    margin-bottom: 18px;
+    border: 0;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;    
+}
+
+.footer__navigation{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+.footer__links ul{
+    display: flex;
+    
+    
+}
+.footer__links li {
+    margin-right: 40px;
+    
+}
+.footer__links a{
+    font-size: 14px;
+    line-height: 24px;
+    color: #929ECC;
+}
+.footer__media_wrapper{
+    margin-top: 26px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__media{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    
+}
