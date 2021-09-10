@@ -12,3 +12,24 @@
     display: flex;
     padding-top: 45px;
 }
+@media screen and (max-width: 320px) {
+    .hero{
+        background: none;
+    }
+    .hero__inner{
+        padding-bottom: 0;
+    }
+    .hero__icon_paragraphs{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .hero__paragraph{
+        margin-top: 40px;
+
+    }
+    .page__paragraph_under_icons{
+        margin: 0;
+    }
+    
+}

@@ -13,14 +13,14 @@
 .footer__logo_date{
     padding-top: 37px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 24px;
     color: #939EA4;
 }
 .footer__logo__name{
     padding-top: 42px;
     font-weight: 900;
-    font-size: 26px;
+    font-size: 1.625rem;
     line-height: 38px;
     color: #37447E;
 }
@@ -45,7 +45,7 @@
     margin-bottom: 18px;
     border: 0;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 0.75rem;
     line-height: 18px;    
 }
 
@@ -61,11 +61,11 @@
     
 }
 .footer__links li {
-    margin-right: 40px;
+    margin-right: 2.5rem;
     
 }
 .footer__links a{
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 24px;
     color: #929ECC;
 }
@@ -80,5 +80,25 @@
     width: 200px;
     display: flex;
     justify-content: space-between;
+    
+}
+@media screen and (max-width:320px) {
+    
+    .footer{
+        height: 260px;
+    }
+    .footer__logo{
+        height: 60px;
+    }
+    .footer__links ul{
+        margin: 0;
+    }
+    .footer__wrapper{
+        height: 50px;
+    }
+    .footer__media_wrapper{
+        padding-bottom: 0;
+    }
+    
     
 }

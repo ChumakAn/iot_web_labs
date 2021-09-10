@@ -3,13 +3,22 @@
     justify-content: space-between;
     align-items: center;
 }
+.header__menu{
+    display: none;
+    width: 32px;
+    cursor: pointer;
+}
+.header__menu > img {
+    max-width: 100%;
+}
+
 .header__nav ul{
     display: flex;
     
 }
 .header__nav-item{
     margin-right: 60px;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 24px;
     color: #505F98;
 }
@@ -19,7 +28,7 @@
 .header__title{
     color: #37447E;
     font-weight: 900;
-    font-size: 26px;
+    font-size: 1.625rem;
 }
 
 .header-button-buy-now{
@@ -27,7 +36,7 @@
     width: 104px;
     background: #FFD166;
     border-radius: 2px;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     color: #111B47;
     padding-top: 4px;
@@ -43,10 +52,70 @@
     width: 104px;
     border-radius: 2px;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: #FFFFFF;
     padding-top: 4px;
     padding-bottom: 4px;
     border: 0;
 }   
 
+@media screen and (max-width: 320px) {
+    .header {
+        position: fixed;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        background-color: white;
+        z-index: 10;
+        
+    }
+    .header__title{
+        display: flex;
+        
+
+    }
+    .header__menu {
+        display: block;
+    }
+    
+    .header-buttons {
+        display: none;
+    }
+    
+    .header__nav {
+        background: #c9d3f5;
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: 0;
+        clip-path: circle(0 at top left);
+        transition: clip-path 0.9s ease-in;
+    }
+
+    .header__nav.open {
+        clip-path: circle(1000px at top);
+    }
+    
+    .header__nav ul {
+        padding-inline-start: 0px;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .header__nav .header__nav-item {
+        margin-right: 0;
+        padding-top: 8vh;
+        flex: 1 ;
+
+    }
+    .header__nav a {
+        font-weight: 500;
+        display: block;
+        font-size: 32px;
+    }
+    
+    
+    
+}

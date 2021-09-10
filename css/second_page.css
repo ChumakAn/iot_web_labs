@@ -13,3 +13,20 @@
     display: flex;
     padding-top: 80px;
 }
+
+@media screen and (max-width:320px) {
+    .second_page{
+        background: none;
+    }
+    .second_page__inner{
+        padding-bottom: 0px;
+    }
+    .second_page__icon_paragraphs{
+        flex-direction: column;
+        align-items: center;
+    }
+    .second_page__paragraphs{
+        margin-top: 40px;
+    }
+    
+}

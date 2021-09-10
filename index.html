@@ -14,13 +14,19 @@
     <section class="hero">
         <div class="container">
             <header class="header">
+                <div class="header__menu" onclick="toggleMenu()">
+                    <img src="images/menu_icon.svg" alt="Menu Icon">
+                </div>
                 <div class="header__title">Landie</div>
                 <div class="header-nav-tools">
-                    <nav class="header__nav">
+                    <nav id = "nav-links" class="header__nav">
                         <ul>
-                            <li class="header__nav-item"><a href="">Home</a></li>
-                            <li class="header__nav-item"><a href="">About</a></li>
-                            <li class="header__nav-item"><a href="">Pricing</a></li>
+                            <li class="header__nav-item">
+                                <a class="header__nav-link" href="">Home</a></li>
+                            <li class="header__nav-item">
+                                <a class="header__nav-link" href="">About</a></li>
+                            <li class="header__nav-item">
+                                <a class="header__nav-link" href="">Pricing</a></li>
                         </ul>
                     </nav>
                     <div class="header-buttons">
@@ -41,12 +47,12 @@
                 <p class="page__paragraph">mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
                     consequat massa quis enim.</p>
                 <div class="hero__icon_paragraphs">
-                    <div>
+                    <div class="hero__paragraph">
                         <img src="images/Icon.svg">
                         <h3 class = "page__icons_title">Titlle Goes Here</h3>
                         <p class="page__paragraph_under_icons">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
                     </div>
-                    <div>
+                    <div class="hero__paragraph">
                         <img src="images/Icon.svg">
                         <h3 class = "page__icons_title">Titlle Goes Here</h3>
                         <p class="page__paragraph_under_icons">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
@@ -66,12 +72,12 @@
                 <p class="page__paragraph">mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
             
             <div class="second_page__icon_paragraphs">
-                <div>
+                <div class="second_page__paragraphs">
                     <img src="images/Icon.svg">
                     <h3 class = "page__icons_title">Titlle Goes Here</h3>
                     <p class="page__paragraph_under_icons">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
                 </div>
-                <div>
+                <div class="second_page__paragraphs">
                     <img src="images/Icon.svg">
                     <h3 class = "page__icons_title">Titlle Goes Here</h3>
                     <p class="page__paragraph_under_icons">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
@@ -141,6 +147,7 @@
         </div>
         </div>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
