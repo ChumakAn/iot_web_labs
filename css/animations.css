@@ -1,0 +1,9 @@
+
+.header-button-learn-now:hover,
+.header-button-buy-now:hover,
+.pricelist__button:hover,
+.footer__button:hover {
+    background-color: transparent;
+    color: #111B47;
+}
+

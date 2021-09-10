@@ -39,11 +39,11 @@
     margin:0 auto;
     width: 109px;
     background: #111B47;
-    border-radius: 2px;
     color: #fff;
     margin-top: 22px;
     margin-bottom: 18px;
-    border: 0;
+    border-color:#111B47;
+    border-radius: 2px;
     font-weight: 500;
     font-size: 0.75rem;
     line-height: 18px;    

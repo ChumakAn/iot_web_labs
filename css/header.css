@@ -35,13 +35,13 @@
     margin-left: 26px;
     width: 104px;
     background: #FFD166;
-    border-radius: 2px;
     font-size: 0.75rem;
     font-weight: 500;
     color: #111B47;
     padding-top: 4px;
     padding-bottom: 4px;
-    border: 0;
+    border-color:#FFD166;
+    border-radius: 2px;
 }
 .header-buttons{
     margin-top: 18px;
@@ -50,13 +50,13 @@
 .header-button-learn-now{
     background: #111B47;
     width: 104px;
-    border-radius: 2px;
     font-weight: 500;
     font-size: 0.75rem;
     color: #FFFFFF;
     padding-top: 4px;
     padding-bottom: 4px;
-    border: 0;
+    border-color: #111B47;
+    border-radius: 2px;
 }   
 
 @media screen and (max-width: 320px) {

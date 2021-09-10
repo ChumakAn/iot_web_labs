@@ -32,12 +32,12 @@
     width: 189px;
     margin-top: 30px;
     background: #111B47;
-    border-radius: 2px;
     color: #fff;
     font-weight: 500;
     font-size: 0.875rem;
     line-height: 18px;
-    border: 0;
+    border-color:#111B47;
+    border-radius: 2px;
 }
 @media screen and (max-width:320px) {
     .pricelist__options{
