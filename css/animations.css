@@ -1,4 +1,7 @@
 
+.nav__link:hover {
+    opacity: 0.5;
+}
 .header-button-learn-now:hover,
 .header-button-buy-now:hover,
 .pricelist__button:hover,
@@ -6,4 +9,16 @@
     background-color: transparent;
     color: #111B47;
 }
+.footer__icons:hover{
+    animation: bounce 2s linear;
+    animation-timing-function: ease;
+}
+
+
+@keyframes bounce{
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
 
