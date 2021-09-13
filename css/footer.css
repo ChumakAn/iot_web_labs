@@ -85,16 +85,16 @@
 @media screen and (max-width:320px) {
     
     .footer{
-        height: 260px;
+        height:16.25rem;
     }
     .footer__logo{
-        height: 60px;
+        height: 3.75rem;
     }
     .footer__links ul{
         margin: 0;
     }
     .footer__wrapper{
-        height: 50px;
+        height: 3.125rem;
     }
     .footer__media_wrapper{
         padding-bottom: 0;

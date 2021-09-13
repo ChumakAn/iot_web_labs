@@ -1,6 +1,8 @@
 
 .nav__link:hover {
     opacity: 0.5;
+    transition-duration: 0.7s;
+    
 }
 .header-button-learn-now:hover,
 .header-button-buy-now:hover,
@@ -8,6 +10,7 @@
 .footer__button:hover {
     background-color: transparent;
     color: #111B47;
+    transition-duration: 1s;
 }
 .footer__icons:hover{
     animation: bounce 2s linear;

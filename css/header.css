@@ -59,7 +59,7 @@
     border-radius: 2px;
 }   
 
-@media screen and (max-width: 320px) {
+@media screen  and (max-width: 768px) {
     .header {
         position: fixed;
         left: 0;
@@ -81,7 +81,11 @@
     .header-buttons {
         display: none;
     }
-    
+    .header__nav-item li{
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+    }
     .header__nav {
         background: #c9d3f5;
         position: fixed;
@@ -100,8 +104,11 @@
     
     .header__nav ul {
         padding-inline-start: 0px;
-        flex-direction: column;
         height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
     }
     
     .header__nav .header__nav-item {

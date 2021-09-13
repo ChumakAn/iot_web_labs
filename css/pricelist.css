@@ -39,8 +39,15 @@
     border-color:#111B47;
     border-radius: 2px;
 }
-@media screen and (max-width:320px) {
+@media screen and (min-width: 320px) and (max-width:767px) {
     .pricelist__options{
         flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px){
+    .pricelist__choice{
+        width: 13.75rem;
+        
     }
 }
