@@ -1,153 +1,69 @@
 <!DOCTYPE html>
-<html lang="eng">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-    <title>My first webiste</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
 
+    <!--Inter font-->
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
 </head>
-
 <body>
-    <section class="hero">
-        <div class="container">
-            <header class="header">
-                <div class="header__menu" onclick="toggleMenu()">
-                    <img src="images/menu_icon.svg" alt="Menu Icon">
-                </div>
-                <div class="header__title">Landie</div>
-                <div class="header-nav-tools">
-                    <nav id = "nav-links" class="header__nav">
-                        <ul>
-                            <li class="header__nav-item">
-                                <a class="nav__link" href="">Home</a></li>
-                            <li class="header__nav-item">
-                                <a class="nav__link" href="">About</a></li>
-                            <li class="header__nav-item">
-                                <a class="nav__link" href="">Pricing</a></li>
-                        </ul>
-                    </nav>
-                    <div class="header-buttons">
-                        <button class="header-button-learn-now">Learn more </button>
-                        <button class="header-button-buy-now">Buy now</button>
-                    </div>
-                </div>
-            </header>
-        </div>
-        <div class="container">
-            <div class="hero__inner">
-                <h1 class="page__title">Introduce Your Product Quickly & Effectively</h1>
-                <p class="page__paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                    ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                    nascetur ridiculus
-                </p>
-            <br>
-                <p class="page__paragraph">mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
-                    consequat massa quis enim.</p>
-                <div class="hero__icon_paragraphs">
-                    <div class="hero__paragraph">
-                        <img src="images/Icon.svg">
-                        <h3 class = "page__icons_title">Titlle Goes Here</h3>
-                        <p class="page__paragraph_under_icons">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                    </div>
-                    <div class="hero__paragraph">
-                        <img src="images/Icon.svg">
-                        <h3 class = "page__icons_title">Titlle Goes Here</h3>
-                        <p class="page__paragraph_under_icons">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    <section class="second_page">
-        <div class="container">
-            <div class="second_page__inner">
-                <h1 class="page__title">Light, Fast & Powerful</h1>
-                <p class="page__paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
-                </p>
-            <br>
-                <p class="page__paragraph">mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-            
-            <div class="second_page__icon_paragraphs">
-                <div class="second_page__paragraphs">
-                    <img src="images/Icon.svg">
-                    <h3 class = "page__icons_title">Titlle Goes Here</h3>
-                    <p class="page__paragraph_under_icons">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                </div>
-                <div class="second_page__paragraphs">
-                    <img src="images/Icon.svg">
-                    <h3 class = "page__icons_title">Titlle Goes Here</h3>
-                    <p class="page__paragraph_under_icons">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="pricelist">
-        <div class = "container">
-            <div class="pricelist__inner">
-                <h1 class="page__title">A Price To Suit Everyone</h1>
-                <p class="page__paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus </p>
-            </div>
-            <div class="pricelist__options">
-                <div class="pricelist__choice">
-                    <h2 class="pricelist__title">FREE</h2>
-                    <h3 class="pricelist__subtitle">UI Kit Demo</h3>
-                    <p class="pricelist__paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
-                    <button class="pricelist__button">Purchase Now</button>
-                </div>
-                <div class="pricelist__choice">
-                    <h2 class="pricelist__title">$40</h2>
-                    <h3 class="pricelist__subtitle">Design Kit</h3>
-                    <p class="pricelist__paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
-                    <button class="pricelist__button">Purchase Design Kit</button> 
-                </div>
-                <div class="pricelist__choice">
-                    <h2 class="pricelist__title">$75</h2>
-                    <h3 class="pricelist__subtitle">Design & Code Package</h3>
-                    <p class="pricelist__paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
-                    <button class="pricelist__button">Purchase Package</button> 
-                </div>
+    <header class="header container">
+    <h1 class="header__name">Shop</h1>
+    </header>
+    <section class="content container">
+    <div class="content__form">
+        <form>
+        <fieldset class="form__create-item">
+            <legend>Create item</legend>
+            <p>
+            <label for="name">Title:</label>
+            <input type="text" id="title_input" />
+            </p>
+            <label for="description">Description:</label>
+            <textarea id="description_input"></textarea>
+            <p>
+            <label for="price">Price</label>
+            <input type="text" id="price_input" />
+            </p>
 
-            </div>
-        </div>
+            <button class="form__create-button" id="submit_button">
+            Submit
+            </button>
+        </fieldset>
+
+        <fieldset class="form__find">
+            <legend>Find Item</legend>
+            <p>Items found: <span id="items_counter"> all </span></p>
+            <p><input type="text" id="find_input" /></p>
+            <button class="form__find-button" id="find_button">Find</button>
+            <button
+            class="form__find-button-cancel"
+            type="submit"
+            id="cancel_find_button"
+            >
+            Cancel
+            </button>
+            <br>
+            <button class="sort_button" id="sort_items_asc">
+            Sort by asc
+            </button>
+            <button class="sort_button" id="sort_items_desc">
+            Sort by desc
+            </button>
+        </fieldset>
+        </form>
+    </div>
+
+    <div class="items_list">
+        <ul id="items_container" class="items_container"></ul>
+    </div>
     </section>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__logo">
-                <div class="footer__logo_date">©2020 LPNU</div>
-                <div class="footer__logo__name">Landie</div>
-            </div>
-            <hr class="footer__hr">
-            <div class="footer__wrapper">
-            <button class="footer__button">IoT edition</button>
-            </div>
-            <div class="footer__navigation">
-                <nav class="footer__links">
-                    <ul>
-                        <li><a class="nav__link" href="">Home</a></li>
-                        <li><a class="nav__link" href="">About</a></li>
-                        <li><a class="nav__link" href="">Contact</a></li> 
-                    </ul>
-                </nav>
-            </div>
-            <div class="footer__media_wrapper">
-            <div class="footer__media">
-                <img class="footer__icons" src="images/Facebook.svg">
-                <img  class="footer__icons" src="images/LinkedIn.svg">
-                <img  class="footer__icons" src="images/Twitter.svg">
-                <img class="footer__icons" src="images/YouTube.svg">
-                <img class="footer__icons" src="images/Instagram.svg">
-            </div>
-        </div>
-        </div>
-    </footer>
-    <script src="js/main.js"></script>
+
+    <script type="module" src="./js/index.js"></script>
 </body>
-
 </html>

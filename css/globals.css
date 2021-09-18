@@ -1,81 +1,44 @@
-body{
-    background: #fff;
-    font-family: "Roboto", "Arial", sans-serif;
-    color: #505f98;
+body {
+    font-family: var(--azaret);
 }
 
-.container{
+.container {
     margin: 0 auto;
     max-width: 1100px;
     width: 100%;
 }
-@media screen and (min-width: 2560px) {
-    body{
-        text-align: center;
-    }
-    .container {
-    max-width: 1100px;
-    }
+
+fieldset {
+    border: none;
 }
 
-@media screen and (min-width: 320px) and (max-width:767px) {
-    .container {
-        width: 17.5rem;
-    }
-    div{
-        max-width: 17.5rem;
-    }
-    body{
-
-        text-align: center;
-    }
-    
-}
-@media screen and (min-width:768px) and (max-width:1023px) {
-    .container{
-        width: 46.25rem;
-    }
-    div{
-        max-width: 46.25rem;
-    }
-    body{
-        text-align: center;
-    }
-    
-}
-
-
-a{
-    text-decoration: none;
-    color: #505f98;
-}
-li{
+label,
+input {
     display: block;
+    font-size: 24px;
+    font-weight: 600;
 }
-p{
-    margin: 0;
-}
-.page__title{
-    font-weight: 500;
-    font-size: 2.25rem;
-    line-height: 48px;
-    color: #091133;
-}
-.page__paragraph{
-    font-size: 1rem;
-    line-height: 26px;
-    color: #6F7CB2;
-}
-.page__icons_title{
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 26px;
-    color: #091133;
 
+label {
+    padding-bottom: 0.5rem;
 }
-.page__paragraph_under_icons{
-    width: 255px;
-    font-size: 0.75rem;
-    line-height: 18px;
-    color: #5D6970;
+
+input {
+    border: 2px solid black;
+    border-radius: 3px;
+    font-weight: 400;
+}
+
+legend {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+button {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+
+li {
+    display: block;
 }

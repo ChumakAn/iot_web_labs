@@ -1,0 +1,22 @@
+.item-card {
+    border: 3px solid #e2e2e2;
+    border-radius: 8px;
+}
+
+.card-img {
+    border-radius: 8px 8px 0 0;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.15rem;
+    margin-left: 0.5rem;
+}
+
+.card-paragraph {
+    font-weight: 500;
+    margin-top: 0.25rem;
+    margin-left: 0.5rem;
+}
