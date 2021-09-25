@@ -20,3 +20,13 @@
     margin-top: 0.25rem;
     margin-left: 0.5rem;
 }
+.button-wrapper{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0.5em;
+}
+.card-edit-button{
+    background-color: royalblue;
+    color: white;
+    padding: 0.6rem 0;
+}

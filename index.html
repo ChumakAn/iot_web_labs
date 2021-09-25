@@ -17,18 +17,22 @@
     </header>
     <section class="content container">
     <div class="content__form">
-        <form>
+        <form id = "validation">
         <fieldset class="form__create-item">
             <legend>Create item</legend>
             <p>
-            <label for="name">Title:</label>
-            <input type="text" id="title_input" />
+            <label for="name" >Title:</label>
+            <input type="text" id="title_input" required>
+                <span class="error" id="errorTitle"></span>
+            <p class = "errorMessage top-arrow" > </p>
+
             </p>
             <label for="description">Description:</label>
             <textarea id="description_input"></textarea>
             <p>
             <label for="price">Price</label>
-            <input type="text" id="price_input" />
+            <input type="number"  id="price_input" required>
+                <span class="error" id="errorPrice"></span>
             </p>
 
             <button class="form__create-button" id="submit_button">
@@ -39,13 +43,14 @@
         <fieldset class="form__find">
             <legend>Find Item</legend>
             <p>Items found: <span id="items_counter"> all </span></p>
-            <p><input type="text" id="find_input" /></p>
+            <p><input type="text" id="find_input" />
+                <span class="error" id="errorFind"></span>
+            </p>
             <button class="form__find-button" id="find_button">Find</button>
             <button
             class="form__find-button-cancel"
             type="submit"
-            id="cancel_find_button"
-            >
+            id="cancel_find_button">
             Cancel
             </button>
             <br>
@@ -64,6 +69,6 @@
     </div>
     </section>
 
-    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/index.js" ></script>
 </body>
 </html>

@@ -4,6 +4,7 @@ const priceInput = document.getElementById("price_input");
 const itemsContainer = document.getElementById("items_container");
 
 const getItemId = (id) => `item-${id}`;
+const getItemToEdit = (id) => `edit-${id}`;
 
 const itemTemplate = ({id, title, desc, price}) =>
     `<li id="${getItemId(id)}" class="item-card">
@@ -15,6 +16,9 @@ alt="card image"/>
     <h5 class="card-title">${title}</h5>
     <p class = "card-paragraph">${desc}</p>
     <p class="card-paragraph">${price}</p>
+    <div class="button-wrapper">
+    <button class="card-edit-button">Edit</button>
+    </div>
 </div>
 </li>
 `;
