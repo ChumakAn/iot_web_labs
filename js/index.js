@@ -1,102 +1,139 @@
 import {
     addItemToPage,
-    clearInputs,
-    getInputValues, renderItemList,
-} from "./dom_util.js";
+    renderItemsList,
+    DELETE_BUTTON_PREFIX,
+    EDIT_BUTTON_PREFIX
+} from "./templates.js";
 
-const titleInput = document.getElementById("title_input");
-const descriptionInput = document.getElementById("description_input");
-const priceInput = document.getElementById("price_input");
-const submitButton = document.getElementById("submit_button");
+import {
+    getData,
+    sendData,
+    editData,
+    deleteData
+} from "./api.js"
+
+import {
+    submitinModal,
+    editedModal,
+    deletedModal
+} from "./modal.js"
+
+const inputs = document.querySelectorAll('input');
+const nameInput = document.getElementById("name_input");
+const submitInputs = document.getElementById("submit_button");
 const findButton = document.getElementById("find_button");
 const cancelFindButton = document.getElementById("cancel_find_button");
 const findInput = document.getElementById("find_input");
-const sortItemsASC = document.getElementById("sort_items_asc");
-const sortItemsDESC = document.getElementById("sort_items_desc");
-const itemsCounter = document.getElementById("items_counter");
-const errorTitle = document.getElementById("errorTitle");
-const errorPrice = document.getElementById("errorPrice");
-const errorFind = document.getElementById("errorFind");
+const sortButtonASC = document.getElementById("sort_button_asc");
+const sortButtonDESC = document.getElementById("sort_button_desc");
+const priceInput = document.getElementById("price_input");
+const error_message = document.getElementById("message");
+const countButton = document.getElementById("count_button");
+const itemCounter = document.getElementById("counter");
 
+export let allItems = [];
 
+export const getBody = () => {
+    var myForm = document.getElementById('add_form');
+    var body = new FormData(myForm);
+    return body
+}
 
-let items = [];
+export const onRemoveItem =  (event) => {
+    const itemId = event.target.id.replace(DELETE_BUTTON_PREFIX, "")
+    deleteData(itemId);
+    deletedModal();
+}
 
-const addItem = ({title, desc, price}) => {
-    const generatedId = uuid.v1();
+export const onEditItem =  (event) => {
+    const itemId = event.target.id.replace(EDIT_BUTTON_PREFIX, "");
+    if (validate()) { editData(itemId), editedModal() };
+    refetchAllItems();
+}
 
-    const newItem = {
-        id: generatedId,
-        title,
-        desc,
-        price,
-    };
-    items.push(newItem);
-    addItemToPage(newItem);
+export const refetchAllItems = () => {
+    const items =  getData();
+    renderItemsList(items, onEditItem, onRemoveItem);
 };
 
-submitButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    const invalidSymbols = ["@", "#", "<", ">", "/", "\\", "*", "+", "-", "=", ")", "(", "[", "]",
-        "{", "}", "&", "^", "%", "$","!", "~"];
+const findItems = (items) => {
+     const foundItems = items[0].filter((items) => items.title.search(findInput.value) !== -1);
+     return foundItems;
 
-    if(titleInput.value == 0){
-        errorTitle.textContent = "Please enter a title";
-        window.alert("Oops,something went wrong");
+};
 
-    }
-    else if(invalidSymbols.some(symbol =>titleInput.value.includes(symbol))){
-        errorTitle.textContent = "Wrong symbols";
-        window.alert("Oops,something went wrong");
-    }
-    else if(priceInput.value <= 0) {
-        errorPrice.textContent = "Please enter a valid number";
-        window.alert("Oops,something went wrong");
-    }
-    else {
-        const {title, description, price} = getInputValues();
-        clearInputs();
+const sortItemsASC = (items) => {
+    const sortedItems = items[0].sort((a, b) => (a.price < b.price) ? 1 : -1);
+    return sortedItems;
+}
 
-        addItem({
-            title,
-            desc: description,
-            price,
-        });
-        errorPrice.textContent = "";
-        errorTitle.textContent = "";
-    }
-});
-findButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    if(findInput.value == 0) {
-        errorFind.textContent = "Please, enter what you want to find";
-        itemsCounter.innerHTML = `${items.length}`;
-    }
-    else {
-        const foundItems = items.filter(item => item.title.search(findInput.value) !== -1);
-        itemsCounter.innerHTML = `${foundItems.length}`;
-        errorFind.textContent = "";
-        renderItemList(foundItems);
-    }
+const sortItemsDESC = (items) => {
+    const sortedItems = items[0].sort((a, b) => (a.price > b.price) ? 1 : -1);
+    return sortedItems;
+}
 
-});
+export const clearInputs = () => {
+    inputs.forEach(input =>  input.value = '');
+};
 
-cancelFindButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    renderItemList(items);
-    itemsCounter.innerHTML = `${items.length}`;
-    findInput.value = "";
-});
-sortItemsASC.addEventListener("click", (event) => {
-    event.preventDefault();
-    items.sort((a, b) => (a.price < b.price) ? 1 : -1);
-    renderItemList(items);
-
+cancelFindButton.addEventListener("click", () => {
+    refetchAllItems(allItems);
+    clearInputs();
 })
-sortItemsDESC.addEventListener("click", (event) => {
+
+submitInputs.addEventListener('click', (event) => {
     event.preventDefault();
-    items.sort((a, b) => (a.price > b.price) ? 1 : -1);
-    renderItemList(items);
+    if (validate()) {
+        sendData(), submitinModal() }
+    clearInputs();
 });
 
-renderItemList(items);
+sortButtonASC.addEventListener('click', (event) => {
+    event.preventDefault();
+    renderItemsList(sortItemsASC(allItems));
+});
+
+sortButtonDESC.addEventListener('click', (event) => {
+    event.preventDefault();
+    renderItemsList(sortItemsDESC(allItems));
+});
+
+
+findButton.addEventListener("click", () => {
+    error_message.style.padding = "10px";
+
+    if (findInput.value == 0) {
+        error_message.textContent = "What you want to find?"
+    } else {
+        renderItemsList(findItems(allItems));
+        clearInputs();
+        error_message.style.display = "none"
+    }
+});
+
+countButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    itemCounter.textContent = `Total amount of items: ${allItems[0].length}`;
+});
+
+const validate = () => {
+    error_message.style.padding = "10px";
+    var text;
+
+    if(nameInput.value.length < 3){
+        text = "Please Enter valid Name";
+        error_message.innerHTML = text;
+        return false;
+    } else if(priceInput.value.length == 0){
+        text = "Please Enter valid Price";
+        error_message.innerHTML = text;
+        return false;
+    } else{
+        error_message.style.display = "none";
+        return true;
+    }
+}
+
+window.onload = () => {
+    renderItemsList(getData());
+}

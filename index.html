@@ -2,73 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop</title>
+    <title>crud web app</title>
 
-    <!--Inter font-->
-    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap 5 -->
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+            integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+            crossorigin="anonymous"
+    />
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+            integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+            crossorigin="anonymous"
+    ></script>
+
+    <!-- UUID library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
 </head>
-<body>
-    <header class="header container">
-    <h1 class="header__name">Shop</h1>
-    </header>
-    <section class="content container">
-    <div class="content__form">
-        <form id = "validation">
-        <fieldset class="form__create-item">
-            <legend>Create item</legend>
-            <p>
-            <label for="name" >Title:</label>
-            <input type="text" id="title_input" required>
-                <span class="error" id="errorTitle"></span>
-            <p class = "errorMessage top-arrow" > </p>
+<body class="bg-light">
+<div class="container p-3">
+    <div class="row mb-3">
+        <h1 class="text-center">Items shop</h1>
+    </div>
+    <div id = "wrapper_items">
+    <div id = "trial" class="row">
+        <div class="col-md-4 mt-2">
+            <form id="add_form" class="bg-light">
+                <h3 class="mb-3">Add your item</h3>
+                <div class="mb-3">
+                    <div id="message"></div>
+                    <div class="mb-3">
+                        <label for="exampleInputName" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="name_input" name="title" />
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPrice" class="form-label">Price</label>
+                        <input type="number" class="form-control" id="price_input" name="price"/>
+                    </div>
+                    <button id="submit_button" type="submit" class="btn btn-outline-dark">
+                        Submit
+                    </button>
+                </div>
+            </form>
+            <div class = "wrapper">
+            <div class="mt-5">
+                <h4 class="mb-3">Find items</h4>
+                <input id="find_input" type="text" class="form-control" />
+                <button id="find_button" type="button" class="btn btn-outline-dark mt-4">
+                    Find
+                </button>
+                <button id="cancel_find_button" type="button" class="btn btn-dark mt-4">
+                    Cancel
+                </button>
+            </div>
+        </div>
 
-            </p>
-            <label for="description">Description:</label>
-            <textarea id="description_input"></textarea>
-            <p>
-            <label for="price">Price</label>
-            <input type="number"  id="price_input" required>
-                <span class="error" id="errorPrice"></span>
-            </p>
+            <div class="mt-5">
+                <h4 class="mb-3">Filter items</h4>
+                <button id="sort_button_asc" type="button" class="btn btn-dark mt-4">
+                    Sort by asc
+                </button>
+                <button id="sort_button_desc" type="button" class="btn btn-dark mt-4">
+                    Sort by desc
+                </button>
 
-            <button class="form__create-button" id="submit_button">
-            Submit
-            </button>
-        </fieldset>
+                    <button id="count_button" type="button" class="btn btn-dark mt-4">
+                        Count amount of items
+                    </button>
+                <p id="counter">  </p>
 
-        <fieldset class="form__find">
-            <legend>Find Item</legend>
-            <p>Items found: <span id="items_counter"> all </span></p>
-            <p><input type="text" id="find_input" />
-                <span class="error" id="errorFind"></span>
-            </p>
-            <button class="form__find-button" id="find_button">Find</button>
-            <button
-            class="form__find-button-cancel"
-            type="submit"
-            id="cancel_find_button">
-            Cancel
-            </button>
-            <br>
-            <button class="sort_button" id="sort_items_asc">
-            Sort by asc
-            </button>
-            <button class="sort_button" id="sort_items_desc">
-            Sort by desc
-            </button>
-        </fieldset>
-        </form>
+            </div>
+        </div>
+
+        </div>
+
     </div>
 
-    <div class="items_list">
-        <ul id="items_container" class="items_container"></ul>
-    </div>
-    </section>
+</div>
 
-    <script type="module" src="./js/index.js" ></script>
+<h2 class="text-center"> Items </h2>
+<ul id="itemsContainer" class="col-md-4 mt-5 mt-md-2 mx-auto">
+</ul>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </body>
 </html>
