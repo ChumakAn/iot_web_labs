@@ -3,11 +3,14 @@ const descriptionInput = document.getElementById("description_input");
 const priceInput = document.getElementById("price_input");
 const itemsContainer = document.getElementById("items_container");
 
-const getItemId = (id) => `item-${id}`;
-const getItemToEdit = (id) => `edit-${id}`;
+const getItemId = (ItemId) => `item-${ItemId}`;
 
-const itemTemplate = ({id, title, desc, price}) =>
-    `<li id="${getItemId(id)}" class="item-card">
+export const EDIT_BUTTON_PREFIX = 'edit-button-';
+export const DELETE_BUTTON_PREFIX = "delete-button-";
+
+
+const itemTemplate = ({ItemId, title, desc, price}) =>
+    `<li ItemId="${getItemId(ItemId)}" class="item-card">
 <img src= "https://content.rozetka.com.ua/goods/images/big/194586782.jpg"
 class = "card image"
 width="375"
@@ -17,7 +20,8 @@ alt="card image"/>
     <p class = "card-paragraph">${desc}</p>
     <p class="card-paragraph">${price}</p>
     <div class="button-wrapper">
-    <button class="card-edit-button">Edit</button>
+    <button class="card-edit-button" id="${EDIT_BUTTON_PREFIX}${ItemId}">Edit</button>  
+     <button id="${DELETE_BUTTON_PREFIX}${ItemId}" class="form__find-button-cancel">Delete</button>
     </div>
 </div>
 </li>
@@ -36,12 +40,13 @@ export const clearInputs = () => {
     priceInput.value = "";
 };
 
-export const addItemToPage = ({id, title, desc, price}) => {
+export const addItemToPage = ({ItemId, title, desc, price}) => {
     itemsContainer.insertAdjacentHTML(
         "afterbegin",
-        itemTemplate({id, title, desc, price})
+        itemTemplate({ItemId, title, desc, price})
     );
 };
+
 export const renderItemList = (items) => {
     itemsContainer.innerHTML = "";
 

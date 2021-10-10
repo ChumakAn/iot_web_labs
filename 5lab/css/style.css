@@ -1,0 +1,32 @@
+.form {
+    width: 350px;
+    margin: 100px;
+}
+
+.item-card {
+    max-width: 420px;
+    display: block;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.form {
+    width: 300px;
+}
+.row{
+    justify-content: space-around;
+}
+.message{
+    margin-bottom: 20px;
+    background: #fe8b8e;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+}
