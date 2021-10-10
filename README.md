@@ -1,14 +1,20 @@
 # web_labs
-# Lab2- Partly responsive landing page
-
-![Landing screenshot](readme-images/landing_page.png)
+# Lab5 CRUD Javascript App: Backend
 
 ---
 
-## Design
-[Click to view in Figma](https://www.figma.com/file/CKE7rSZvwWAckhsFpQLfZW/LabWork1-V1)
+## Task :
+Implement operations:
++ POST
++ PUT
++ DELETE
++ GET 
 
 ---
 
-## Installation
-You could just download the project and open index.html file and you are all set!
+## Installation:
++ Download files from my repository `node_js_server`
++ Write in console * node server.js *
++ Then git clone this branch and open `index.html` file
+
+### You are all set!
