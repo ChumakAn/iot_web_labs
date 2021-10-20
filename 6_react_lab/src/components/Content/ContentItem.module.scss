@@ -1,0 +1,27 @@
+@import "../../typography/colors.scss";
+
+.item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  max-width: 325px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.image {
+  max-width: 325px;
+  max-height: 325px;
+  text-align: center;
+}
+
+.itemName {
+  display: inline-block;
+  border-bottom: solid $dark-grey;
+  transition: 1s;
+}
+
+.item:hover .itemName {
+  border-bottom: solid $redapple;
+  margin-bottom: 0;
+}
