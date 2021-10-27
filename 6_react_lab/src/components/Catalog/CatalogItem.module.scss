@@ -1,0 +1,35 @@
+@import "../../typography/colors.scss";
+
+.catalogItem {
+  background-color: $grey;
+  padding: 1rem 1rem 0 1rem;
+  border: 2px solid $grey;
+  border-radius: 0.5rem;
+  transition: 0.3s ease-in;
+}
+
+.itemTitle {
+  display: inline-block;
+  font-size: 1.75em;
+  transition: 0.3s ease-in;
+  border-bottom: solid $grey;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+
+.itemImage {
+  max-width: 300px;
+  max-height: 300px;
+}
+
+// animations
+
+.catalogItem:hover,
+.catalogItem:focus {
+  box-shadow: 0 1.25rem 0.5rem -1rem $redapple;
+  transform: translateY(-0.25rem);
+}
+
+.catalogItem:hover .itemTitle {
+  border-bottom: solid $redapple;
+}

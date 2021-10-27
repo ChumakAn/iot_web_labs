@@ -1,6 +1,5 @@
 
 import { ContentItem } from "./ContentItem"
-import { Button } from "../Button/Button"
 
 import styles from "./Content.module.scss"
 

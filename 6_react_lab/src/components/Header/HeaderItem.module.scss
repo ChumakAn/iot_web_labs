@@ -1,11 +1,11 @@
 @import "../../typography/colors.scss";
 
 .headerItem:not(:last-child) {
-  margin-right: 4rem;
+  margin-right: 1rem;
 }
 
 .headerItem {
-  padding: 8px 16px;
+  padding: 8px 8px;
   color: white;
   text-decoration: none;
   font-size: 20px;

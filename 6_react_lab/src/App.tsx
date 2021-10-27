@@ -1,15 +1,17 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
-  Route
+    BrowserRouter as Router,
+    Route, Switch
 } from "react-router-dom";
 
 import { Header } from './components/Header/Header';
-import { Hero } from "./components/Hero/Hero";
 
 import styles from './App.scss';
-import {Content} from "./components/Content/Content";
 import {Footer} from "./components/Footer/Footer";
+import {Content} from "./components/Content/Content";
+import {Hero} from "./components/Hero/Hero";
+import {Catalog} from "./components/Catalog/Catalog";
+
 
 
 function App() {
@@ -17,8 +19,22 @@ function App() {
       <div className={styles.app}>
         <Router>
           <Header />
-            <Hero/>
-            <Content/>
+            <Switch>
+                <Route exact path="/">
+                    <Hero />
+                    <Content />
+                </Route>
+                <Route exact path="/home">
+                    <Hero />
+                    <Content />
+                </Route>
+                <Route exact path="/catalog">
+                    <Catalog />
+                </Route>
+                <Route exact path="/cart">
+                    <div>Coming soon..</div>
+                </Route>
+            </Switch>
             <Footer/>
         </Router>
       </div>

@@ -6,12 +6,11 @@ interface ButtonProps {
 
 export const Button = (props: ButtonProps) => {
     return (
+        <>
         <button className={styles.button}>
             {props.label}
         </button>
+        </>
     )
 }
 
-//
-// will be updated with useState to become more flexable
-//
