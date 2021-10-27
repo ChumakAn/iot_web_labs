@@ -1,0 +1,33 @@
+@import "../../typography/colors.scss";
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 16px;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.hero div {
+  padding: 0 5%;
+}
+
+.heroName {
+  margin-bottom: 0;
+  display: inline-block;
+  border-bottom: solid $redapple;
+}
+
+.about {
+  font-size: 1.1rem;
+}
+
+.more {
+  margin-top: 1rem;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

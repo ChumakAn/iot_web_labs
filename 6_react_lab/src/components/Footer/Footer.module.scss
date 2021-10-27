@@ -1,0 +1,29 @@
+@import "../../typography/colors.scss";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: solid $grey;
+  margin-top: 2rem;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.media img:not(:nth-child(3)) {
+  margin-right: 0.4rem;
+}
+
+.rights {
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  border-top: solid $grey;
+  width: 50%;
+}
