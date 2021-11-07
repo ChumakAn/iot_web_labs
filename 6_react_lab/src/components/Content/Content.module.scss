@@ -49,3 +49,9 @@
   border-color: $blood;
   transform: translateY(0.25em);
 }
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}

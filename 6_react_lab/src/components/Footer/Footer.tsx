@@ -24,7 +24,7 @@ export const Footer = () => {
                 <p>
                     2021 IoT LPNU
                     <br/>
-                    © All rights reserved (no)
+                    © All rights reserved (нє)
                 </p>
             </div>
         </footer>

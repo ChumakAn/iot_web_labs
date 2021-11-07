@@ -9,8 +9,8 @@
 }
 
 .image {
-  max-width: 325px;
-  max-height: 325px;
+  max-width: 420px;
+  max-height: 420px;
   text-align: center;
 }
 
@@ -23,4 +23,7 @@
 .item:hover .itemName {
   border-bottom: solid $redapple;
   margin-bottom: 0;
+}
+.wrapper{
+  max-width: 420px;
 }

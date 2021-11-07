@@ -1,3 +1,5 @@
+@import "../../typography/colors.scss";
+
 .catalogTitle {
   text-align: center;
 }
@@ -13,4 +15,66 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+input{
+  border-radius: 8px ;
+  border-color: transparent;
+  outline-color: red;
+  background-color: #333333;
+  width: 20rem;
+  height: 1.75rem;
+  font-size: 18px;
+  color: white;
+  margin-right: 0.75rem;
+
+}
+.search{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.search_button{
+  text-decoration: none;
+  background: none;
+  border: 2px solid;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  color: $redapple;
+  transition: 0.8s;
+  margin-left: 1rem;
+}
+.view_more_button {
+  text-decoration: none;
+  background: none;
+  border: 2px solid;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+
+}
+.view_more_button {
+  color: $redapple;
+  transition: 0.8s;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+}
+
+.view_more_button:hover,
+.view_more_button:focus {
+  border-color: $redapple;
+}
+.sort_wrapper{
+  display: flex;
+  justify-content: space-evenly;
 }

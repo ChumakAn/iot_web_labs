@@ -33,3 +33,28 @@
 .catalogItem:hover .itemTitle {
   border-bottom: solid $redapple;
 }
+.view_more_button {
+  text-decoration: none;
+  background: none;
+  border: 2px solid;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  padding: 0.25rem 0.5rem;
+}
+.view_more_button {
+  color: $redapple;
+  transition: 0.8s;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+}
+
+.view_more_button:hover,
+.view_more_button:focus {
+  border-color: $redapple;
+}

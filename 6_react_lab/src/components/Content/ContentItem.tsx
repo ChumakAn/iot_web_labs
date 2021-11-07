@@ -12,7 +12,7 @@ export const ContentItem = (props: ContentItemProps) => {
             <div>
                 <img className={styles.image} src={props.imageURL} alt="content item image"/>
             </div>
-            <div>
+            <div className={styles.wrapper}>
                 <h3 className={styles.itemName}>{props.label}</h3>
                 <p>{props.content}</p>
             </div>
