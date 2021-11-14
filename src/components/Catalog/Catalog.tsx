@@ -9,7 +9,6 @@ export interface dataProps {
     id: string | number;
     title: string;
     price: number;
-
 }
 
 export const Catalog = () => {
@@ -71,7 +70,6 @@ export const Catalog = () => {
                 }
             </div>
             <div className={styles.button_wrapper}>
-
                 {showMore
                 &&
                 <button className={styles.view_more_button} name="view more button" onClick={showMoreButton}>View

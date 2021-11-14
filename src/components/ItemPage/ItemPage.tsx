@@ -1,5 +1,3 @@
-
-
 import styles from "./ItemPage.module.scss";
 import {Link, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
@@ -9,15 +7,15 @@ import {Loader} from "../Catalog/Loader";
 
 export const ItemPage = () => {
 
-    const { id } = useParams<{id: string }>();
+    const {id} = useParams<{ id: string }>();
     const [item, setItem] = useState<any>();
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-            setTimeout(async () =>{
-                setItem(await getById(id));
-                setLoading(false);
-            },300)
+        setTimeout(async () => {
+            setItem(await getById(id));
+            setLoading(false);
+        }, 300)
     }, [id])
 
     return (

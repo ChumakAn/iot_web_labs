@@ -1,23 +1,27 @@
 @import "../../typography/colors.scss";
-.image{
+
+.image {
   max-width: 350px;
   max-height: 350px;
 }
 
-.item_info{
-  margin-top:30px ;
+.item_info {
+  margin-top: 30px;
   display: flex;
 
 }
-.description{
+
+.description {
   margin-left: 10rem;
   max-width: 600px;
 }
-.price{
+
+.price {
   font-size: 1.5rem;
 
 }
-.price_and_buttons{
+
+.price_and_buttons {
   margin-top: 2rem;
   display: flex;
   justify-content: space-between;
@@ -35,6 +39,7 @@
   padding: 0.25rem 0.5rem;
   margin-left: 0.5rem;
 }
+
 .view_more_button {
   color: $redapple;
   transition: 0.8s;
