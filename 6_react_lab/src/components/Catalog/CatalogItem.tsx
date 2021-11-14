@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
 import styles from "./CatalogItem.module.scss";
+import {ItemInfoButton} from "./ItemInfoButton";
 
 interface CatalogItemProps {
     id: number | string;
     title: string;
     price: number;
-    description: string;
+
 }
 
 
@@ -15,11 +15,11 @@ export const CatalogItem = (props: CatalogItemProps) => {
             <img className={styles.itemImage} src="https://content.rozetka.com.ua/goods/images/big/194271151.jpg" alt="item"/>
             <p className={styles.itemTitle}>{props.title}</p>
 
-            <p>{props.description}</p>
+            <p>props.description</p>
 
             <p>{props.price}</p>
             <p>
-                <Link className={styles.view_more_button} to={{pathname: `catalog/info/${props.id}`}}>More</Link>
+                <ItemInfoButton itemId={props.id}/>
             </p>
         </div>
     )

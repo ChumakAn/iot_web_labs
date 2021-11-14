@@ -10,7 +10,7 @@ import styles from './App.scss';
 import {Footer} from "./components/Footer/Footer";
 import {Content} from "./components/Content/Content";
 import {Hero} from "./components/Hero/Hero";
-import {Catalog, data} from "./components/Catalog/Catalog";
+import {Catalog} from "./components/Catalog/Catalog";
 import {ItemPage} from "./components/ItemPage/ItemPage";
 
 
@@ -33,7 +33,7 @@ function App() {
                     <Catalog />
                 </Route>
                 <Route exact path='/catalog/info/:id'>
-                    <ItemPage data={data}/>
+                    <ItemPage/>
                 </Route>
                 <Route exact path="/cart">
                     <div>Coming soon..</div>
