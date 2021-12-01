@@ -1,0 +1,41 @@
+@import "../../typography/colors.scss";
+
+.wrapper{
+  border-bottom: solid $grey;
+}
+.item {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.itemImage {
+  max-width: 230px;
+}
+
+.itemInfo{
+  font-size: 1.25rem;
+  margin-left: 5rem;
+
+}
+.wrapperButton{
+  display: flex;
+  justify-content: right;
+}
+.removeButton{
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  margin-bottom: 2rem;
+  justify-content: center;
+  color: $redapple;
+  transition: 0.8s;
+  &:hover,
+  &:focus {
+    color: #fff;
+    border-radius: 100px;
+  }
+}

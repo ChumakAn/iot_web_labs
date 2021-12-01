@@ -1,0 +1,31 @@
+@import "../../typography/colors.scss";
+
+// default button styles
+.button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  padding: 0.25em 0.5em;
+  justify-content: center;
+
+}
+
+// animation
+.button {
+  color: $redapple;
+  transition: 0.8s;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    border-radius: 100px;
+  }
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em $blood;
+  border-color: $blood;
+  transform: translateX(0.25em);
+}
