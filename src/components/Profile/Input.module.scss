@@ -1,0 +1,88 @@
+@import "../../typography/colors.scss";
+
+.header {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.field {
+  font-size: 1.3rem;
+  background-color: #ecf7ff;
+  color: black;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  transition: 0.1s ease-in-out;
+}
+
+.field:focus {
+  outline: 4px solid $redapple;
+  background-color: #c1e2fd;
+}
+
+.is_registered {
+  font-size: 1.25rem;
+}
+
+.register_link {
+  text-decoration: none;
+  font-weight: bold;
+  color: $redapple;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.error {
+  font-style: italic;
+  color: $redapple;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  border: 2px solid;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+// animations
+.button {
+  color: $redapple;
+  transition: 0.8s;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+}
+
+.button:hover,
+.button:focus {
+  border-color: $redapple;
+}

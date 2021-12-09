@@ -1,0 +1,56 @@
+@import "../../typography/colors.scss";
+
+.profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image {
+  max-width: 500px;
+  max-height: 500px;
+  border-radius: 1rem;
+}
+
+.user_name {
+  font-size: 2rem;
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.logout {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: $redapple;
+}
+
+.change_password {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: $redapple;
+}
+
+.logout,
+.change_password {
+  padding: 0.5rem 0.75rem;
+  border-radius: 1rem;
+  transition: 0.3s ease-in-out;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
+
+.logout:hover,
+.change_password:hover {
+  background-color: $redapple;
+}

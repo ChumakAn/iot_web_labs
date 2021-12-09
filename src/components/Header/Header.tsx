@@ -8,9 +8,10 @@ export const Header = () => {
             <Logo />
             <nav>
                 <div>
-                    <HeaderItem label="Home" path="/home"/>
+                    <HeaderItem label="Home" path="/"/>
                     <HeaderItem label="Catalog" path="/catalog"/>
                     <HeaderItem label="Cart" path="/cart"/>
+                    <HeaderItem label="Profile" path="/profile"/>
                 </div>
             </nav>
         </header>
